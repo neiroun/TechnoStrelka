@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+
 html { 
-=======
-html{
->>>>>>> 404c4c005ad1733239a7e0299e25487670825189
     width: 100%;
     height: 100%;
+    background: url('bg1.png');
 }
 
 * {
@@ -15,7 +13,6 @@ body{
     font-family: 'Lato';
 }
 
-<<<<<<< HEAD
 .line {
     width: 600px;
     height: 35px;
@@ -29,14 +26,14 @@ body{
 #login {
     margin-top: 450px;
     margin-left: 33%;
-    background-color: coral;
+    background-color: #FFF;
     position: absolute;
 }
 
 #password {
     margin-top: 510px;
     margin-left: 33%;
-    background-color: blanchedalmond;
+    background-color: #FFF;
     position: absolute;
 }
 
@@ -47,14 +44,15 @@ body{
 }
 
 #sign_like_guest {
+    background: transparent;
+    border: none;
+    font-size: 14pt;
+    text-decoration: underline;
     margin-top: 630px;
     position: absolute;
     margin-left: 40.15%
-=======
-.inputs_container{
-    display: flex;
-    justify-content: center;
-    height 100;
-    width 100;
->>>>>>> 404c4c005ad1733239a7e0299e25487670825189
+}
+
+#sign_like_guest:hover{
+    color: blue;
 }
