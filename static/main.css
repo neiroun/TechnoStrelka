@@ -1,4 +1,4 @@
-html{
+html { 
     width: 100%;
     height: 100%;
 }
@@ -11,9 +11,38 @@ body{
     font-family: 'Lato';
 }
 
-.inputs_container{
-    display: flex;
-    justify-content: center;
-    height 100;
-    width 100;
+.line {
+    width: 600px;
+    height: 35px;
+}
+
+.button {
+    width: 300px;
+    height: 25px;
+}
+
+#login {
+    margin-top: 450px;
+    margin-left: 33%;
+    background-color: coral;
+    position: absolute;
+}
+
+#password {
+    margin-top: 510px;
+    margin-left: 33%;
+    background-color: blanchedalmond;
+    position: absolute;
+}
+
+#sign_in {
+    margin-top: 590px;
+    position: absolute;
+    margin-left: 40.15%
+}
+
+#sign_like_guest {
+    margin-top: 630px;
+    position: absolute;
+    margin-left: 40.15%
 }
