@@ -7,10 +7,11 @@
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </head>
     <body>
-        <input type="login" class="line login_line" id="login" name="login"></input>
-        <input type="password" class="line password_line" id="password" name="password"></password>
-        <div id="buttons_container">
-            <button type="sign_in" class="button sign_in_bt" id="sign_in" name="sign_in"></button>
-            <button type="sign_like_guest" class="button sign_like_guest_bt" id="sign_like_guest" name="sign_like_guest">Войти как гость</button></div>
+        <div id="container">
+            <button class="bg"></button>
+            <input type="login" class="line login_line" id="login" name="login" value="Логин"></input>
+            <input type="line" class="line password_line" id="password" name="password" value="Пароль"></input> <!-- изменить type='password' чтобы введенный текст превращался в звездочки-->
+            <button type="sign_in" class="button sign_in_bt" id="sign_in" name="sign_in"><b>Войти</b></button>
+            <button type="sign_like_guest" class="button sign_like_guest_bt" id="sign_like_guest" name="sign_like_guest">Войти как гость</button>
         </div>
     </body>
