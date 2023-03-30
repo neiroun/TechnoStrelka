@@ -58,9 +58,17 @@ db_work.db_items = {
     'time': 'INT',
     'day': 'INT',
     'room': 'TEXT',
-    'teacher': 'TEXT'
+    'teacher': 'TEXT',
+    'group': 'TEXT',
+    'subject': 'TEXT'
 }
-db_work.create_table('lessons')
+db_work.create_table('teachers')
+db_work.db_items = {
+    'id': 'INTEGER PRIMARY KEY AUTOINCREMENT',
+    'FIO': 'INT',
+    'hour_per_week': 'INT'
+}
+db_work.insert('lessons', [1, 1, '"101"', '"Иванов И.И"'])
 #db_work.insert('lessons', [1, 1, '"room1"', '"me"'])
-db_work.delete_by_id('lessons', 2)
-print(db_work.select('lessons'))
+#db_work.delete_by_id('lessons', 2)
+#print(db_work.select('lessons'))
