@@ -8,7 +8,7 @@ frame_r = 0
 def index():
     return render_template('index.html')
 
-@app.route('/tables')
+@app.route('/table')
 def render():
     return render_template('tables.html', rows=range(1, 6), cols=range(1, 6))
 
