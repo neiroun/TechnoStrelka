@@ -3,10 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>Технострелка</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="/static/logo.png" type="image/png">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
         <script src="{{ url_for('static', filename='script_main.js') }}"></script>
     </head>
     <body>
+        <div class="select" id="list">
+            <input class="select__input" type="hidden" name="">
+            <div class="select__head">Выберите группу</div>
+            <ul class="select__list" style="display: none;">
+                <li class="select__item">1П</li>
+                <li class="select__item">2П</li>
+                <li class="select__item">3П</li>
+                <li class="select__item">4П</li>
+            </ul>
+        </div>
+        <button id="back"></button>
         <table class="table" id="table">
             <caption>Расписание групп</caption>
             <button id="schedule"> Просмотреть расписание</button>

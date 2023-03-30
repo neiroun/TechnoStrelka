@@ -53,6 +53,7 @@ class DBWork:
 
 
 db_work = DBWork("lessons.db")
+db_work.create_table('lessons')
 db_work.db_items = {
     'id': 'INTEGER PRIMARY KEY AUTOINCREMENT',
     'time': 'INT',
