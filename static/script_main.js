@@ -77,6 +77,29 @@ window.onload = () => {
         let req = new XMLHttpRequest();
         req.open('GET', '/result?stat=' + document.getElementById('group_selector').value, true);
         req.send();
+        location.reload();
+        document.getElementById('table').hidden = false;
+        document.getElementById('table_team').hidden = true;
+        document.getElementById('schedule_block').hidden = false;
+        document.getElementById('list').style.display = 'block';
+        document.getElementById('schedule').style.display = 'none';
+        document.getElementById('back').style.display = 'block';
+        document.getElementById('delimiter').hidden = true;
+        document.getElementById('teacher').style.display = 'none';
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('About_ass').style.display = 'none';
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('ytata').style.display = 'none';
+        document.getElementById('foto1').style.display = 'none';
+        document.getElementById('foto2').style.display = 'none';
+        document.getElementById('foto3').style.display = 'none';
+        document.getElementById('left_text').style.display = 'none';
+        document.getElementById('middle_text').style.display = 'none';
+        document.getElementById('right_text').style.display = 'none';
+        document.getElementById('team').style.display = 'none';
+        if (button === '1'){
+            document.getElementById('edit').style.display = 'block';
+        }
     }
     document.getElementById('edit').onclick = () => {
         document.location='reset'
