@@ -25,16 +25,18 @@
             <button id="schedule"> Просмотреть расписание</button>
             <thead>
                 <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
+                    <th>Занятия</th>
+                    <th>Понедельник</th>
+                    <th>Вторник</th>
+                    <th>Среда</th>
+                    <th>Четверг</th>
+                    <th>Пятница</th>
                 </tr>
             </thead>
             <tbody>
                 {% for i in rows %}
                     <tr>
+                        <td>{{ i }} пара</td>
                     {% for j in cols %}
                         <td> {{ i }} + {{ j }}</td>
                     {% endfor %}
