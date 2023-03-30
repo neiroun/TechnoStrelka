@@ -237,7 +237,6 @@ html{
     border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
     border-image-slice: 1;
 	border-radius: 10px;
-	background-size: 80% 80%;
     margin: 10px 20px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
@@ -460,8 +459,6 @@ body {
 #team{
     font-size: 20px;
     font-family: URW Chancery L, cursive;
-    padding-top: 400px;
-    padding-left: 50px;
     color: #7fe119;
 }
 
