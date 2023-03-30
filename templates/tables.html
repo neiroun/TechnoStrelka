@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Технострелка</title>
+    </head>
+    <body>
+        <table>
+            {% for i in rows %}
+                <tr>
+                {% for j in cols %}
+                    <td> {{ i }} + {{ j }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+
+        </table>
+    </body>

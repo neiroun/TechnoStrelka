@@ -10,7 +10,7 @@ def index():
 
 @app.route('/main')
 def render():
-    return render_template('main.html')
+    return render_template('tables.html', rows=range(1, 6), cols=range(1, 6))
 
 if __name__ == '__main__':
     app.debug = True
