@@ -39,6 +39,7 @@ class DBWork:
             sql_query += f'{arg}, '
         sql_query = sql_query[:-2]
         sql_query += f')'
+        #error
         cur.execute(sql_query)
         con.close()
 
