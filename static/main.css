@@ -19,16 +19,19 @@ body{
 
 .bg {
     position: fixed;
-    display: flex;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.381);
+    background-clip: padding-box;
+    padding: 10px;
     width: 700px;
     height: 800px;
-    background-color: rgba(253, 252, 252, 0.384);
     left: 30.56%;
     top: 10%;
-    border: 10px solid;
-    border-image: linear-gradient(45deg,rgb(100, 33, 139), rgb(81, 129, 231)) 1;
-    border-radius: 10px;
+    /* just to show box-shadow still works fine */
+    box-shadow: 0 3px 9px black, inset 0 0 9px white;
 }
+
 
 .line {
     display: block;
@@ -75,8 +78,8 @@ body{
     background: linear-gradient(35deg, rgb(100, 33, 139), rgb(81, 129, 231));
     border: none;
     color: black;
-    border-radius: 10px;
     position: fixed;
+    border-radius: 16px;
 }
 
 #sign_in:hover {
@@ -98,4 +101,10 @@ body{
 
 #sign_like_guest:hover{
     color: blue;
+}
+
+#logo{
+    position: absolute;
+    left: 35.9%;
+    top: 8%
 }

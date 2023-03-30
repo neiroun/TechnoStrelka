@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Технострелка</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='script_login.js') }}"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
@@ -12,7 +12,8 @@
             <button class="bg"></button>
             <input type="login" class="line login_line" id="login" name="login" value="Логин"></input>
             <input type="line" class="line password_line" id="password" name="password" value="Пароль"></input> <!-- изменить type='password' чтобы введенный текст превращался в звездочки-->
-            <button type="sign_in" class="button sign_in_bt" id="sign_in" name="sign_in"><b>Войти</b></button>
+            <button type="sign_in" class="button sign_in_bt" id="sign_in" name="sign_in" onclick="window.location.href='table'"><b>Войти</b></button>
             <button type="sign_like_guest" class="button sign_like_guest_bt" id="sign_like_guest" name="sign_like_guest">Войти как гость</button>
+            <img id="logo" src="{{ url_for('static', filename='logo.png') }}">
         </div>
     </body>

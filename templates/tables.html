@@ -3,16 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>Технострелка</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+        <script src="{{ url_for('static', filename='script_main.js') }}"></script>
     </head>
     <body>
-        <table>
-            {% for i in rows %}
+        <table class="table" id="table">
+            <caption>Расписание групп</caption>
+            <button id="schedule"> Просмотреть расписание</button>
+            <thead>
                 <tr>
-                {% for j in cols %}
-                    <td> {{ i }} + {{ j }}</td>
-                {% endfor %}
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
                 </tr>
-            {% endfor %}
-
+            </thead>
+            <tbody>
+                {% for i in rows %}
+                    <tr>
+                    {% for j in cols %}
+                        <td> {{ i }} + {{ j }}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </body>
