@@ -23,11 +23,10 @@ body{
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.381);
     background-clip: padding-box;
-    padding: 10px;
-    width: 700px;
-    height: 800px;
+    width: 34.8%;
+    height: 83%;
     left: 30.56%;
-    top: 10%;
+    top: 8%;
     /* just to show box-shadow still works fine */
     box-shadow: 0 3px 9px black, inset 0 0 9px white;
 }
@@ -58,6 +57,11 @@ body{
     border: solid;
     border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
     position: absolute;
+}
+
+#login:hover, #login:focus, #login:active, #password:hover, #password:focus, #password:active{
+    outline: 0;
+    outline-offset: 0;
 }
 
 #password {
@@ -96,7 +100,7 @@ body{
     text-decoration: underline;
     top: 80%;
     position: fixed;
-    left: 41.15%
+    left: 41.15%;
 }
 
 #sign_like_guest:hover{
@@ -105,6 +109,7 @@ body{
 
 #logo{
     position: absolute;
-    left: 35.9%;
-    top: 8%
+    left: 36%;
+    top: 3%;
+    width: 25%;
 }
