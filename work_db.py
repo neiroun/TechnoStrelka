@@ -43,6 +43,14 @@ class DBWork:
         con.commit()
         con.close()
 
+    def delete_by_id(self, table, id):
+        con = sqlite3.connect(self.db_name)
+        cur = con.cursor()
+        sql_query = f'DELETE FROM {table} WHERE id = {id}'
+        cur.execute(sql_query)
+        con.commit()
+        con.close()
+
 
 db_work = DBWork("lessons.db")
 db_work.db_items = {
@@ -53,5 +61,6 @@ db_work.db_items = {
     'teacher': 'TEXT'
 }
 db_work.create_table('lessons')
-db_work.insert('lessons', [1, 1, '"room1"', '"me"'])
+#db_work.insert('lessons', [1, 1, '"room1"', '"me"'])
+db_work.delete_by_id('lessons', 2)
 print(db_work.select('lessons'))
