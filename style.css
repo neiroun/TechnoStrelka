@@ -1,0 +1,36 @@
+#time{
+    display: block;
+    top: 45%;
+    left: 45%;
+    border-radius: 10px;
+    background-color: #FFF;
+    border: solid;
+    border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
+    position: fixed;
+    font-size: 16;
+}
+
+#day{
+    display: block;
+    top: 49%;
+    left: 47%;
+    background: linear-gradient(35deg, rgb(100, 33, 139), rgb(81, 129, 231));
+    border: none;
+    color: black;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 16;
+}
+
+.bg {
+    position: fixed;
+    display: flex;
+    width: 700px;
+    height: 800px;
+    background-color: rgba(253, 252, 252, 0.384);
+    left: 30.56%;
+    top: 10%;
+    border: 10px solid;
+    border-image: linear-gradient(45deg,rgb(100, 33, 139), rgb(81, 129, 231)) 1;
+    border-radius: 10px;
+}
