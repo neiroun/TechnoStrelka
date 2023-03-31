@@ -24,6 +24,7 @@
         <table class="table" id="table">
             <caption>Расписание групп</caption>
             <button id="reload">Обновить</button>
+            <button id="edit">Редактировать</button>
             <button id="schedule">Просмотреть расписание</button>
             <button id="teacher">Список учителей</button>
             <button id="About_ass">О нас</button>
@@ -34,11 +35,11 @@
             <img src="https://sun1-26.userapi.com/impg/1bfKQ9s23dZS9NfHoySMR-qsb7xHV4DX4oT2xQ/Qxxct7HguBA.jpg?size=348x311&quality=96&sign=3cd40c8b608bc582c8d9aa35d0b71c3f&type=album"
             width="13%" height="13%" id="foto3">
             <h3 id="fio1">Рослов М.С</h3>
-            <h1>О нас</h1>
-            <h4>Состав команды: </h4>
-            <h5>-Панкратов Дмитрий</h5>
-            <h5>-Ахмедов Эльман</h5>
-            <h5>-Рослов Максим</h5>
+            <h1 id="aboba">О нас</h1>
+            <h4 id="sostav">Состав команды: </h4>
+            <h5 id="name1">-Панкратов Дмитрий</h5>
+            <h5 id="name2">-Ахмедов Эльман</h5>
+            <h5 id="name3">-Рослов Максим</h5>
             <thead>
                 <tr>
                     <th>Занятия</th>
@@ -58,7 +59,7 @@
                             <!--Кнопки-->
                             {% if schedule[j][i] != '' %}
                                 {% set a = ['i0','i1','i2','i3','i4','i5','i6','i7','i8','i9','i10','i11','i12','i13','i14','i15','i16','i17','i18','i19'] %}
-                                <button name=a[i*5+j]>X</button>
+                                <button name=a[i*5+j]>X</button>reset
                             {% endif %}
                             <!--end-->
                         </td>

@@ -283,21 +283,47 @@
     inset 0 2px 0 rgba(0, 0, 0, .1);
 }
 
-#foto1{
-    margin-left: 100px;
-}
-
-#foto2{
-    top: 20px;
-    margin-left: 200px;
-}
-
-#foto3{
-    top: 20px;
-    margin-left: 200px;
-}
-
-#fio1{
-    margin-left: 100px;
-}
-
+#edit{
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+	left: 5.5%;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+	border-radius: 10px;
+	background-size: 80% 80%;
+	width: 10%;
+    bottom: 50%;
+	left: 88%;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+#edit:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+#edit:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #f2f3f4;
+	border-image: none;
+  }
+#edit:hover:before {
+    color: #f2f3f4;
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+  }
