@@ -24,7 +24,7 @@ window.onload = () => {
     }
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
-        req.open('GET', '/result?stat=' + 1, true);
+        req.open('GET', '/result?stat=' + document.getElementById('group_selector').value, true);
         req.send();
     }
  }
