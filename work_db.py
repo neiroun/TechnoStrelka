@@ -25,6 +25,15 @@ class DBWork:
         cur.execute(sql_query)
         con.close()
 
+    def select_groups(self, table):
+        con = sqlite3.connect(self.db_name)
+        cur = con.cursor()
+        result = cur.execute(f'SELECT DISTINCT group_name FROM {table} '
+                             ).fetchall()
+        result = [x[0] for x in result]
+        con.close()
+        return result
+
     def insert(self, table, entity_args):
         assert len(entity_args) == len(self.db_items.keys()) - (1 if 'id' in self.db_items.keys() else 0)
         con = sqlite3.connect(self.db_name)
@@ -100,3 +109,4 @@ db_work.create_table('lessons')
 #db_work.insert('lessons', [2, 3, '"102"', '"Иванов И.И"', '"2P"', '"Java"'])
 # db_work.delete_by_id('lessons', 2)
 print(db_work.select_all('lessons', Schedule))
+print(db_work.select_groups('lessons'))

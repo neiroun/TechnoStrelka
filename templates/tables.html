@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="select" id="list">
-            <input class="select__input" type="hidden" name="group_selector">
+            <input class="select__input" type="hidden" id="group_selector">
             <div class="select__head">Выберите группу</div>
             <ul class="select__list" style="display: none;">
                 <li class="select__item">1П</li>
@@ -39,7 +39,7 @@
                         <td>{{ i + 1 }} пара</td>
                     {% for j in range(5) %}
 
-                        <td> {{ schedule[j][i] + (', 1П' if schedule[j][i] != '' else '') }}</td>
+                        <td> {{ schedule[j][i] + (gr if schedule[j][i] != '' else '') }}</td>
                     {% endfor %}
                     </tr>
                 {% endfor %}

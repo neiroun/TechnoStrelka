@@ -9,12 +9,15 @@ frame_r = 0
 def index():
     return render_template('index.html')
 
-@app.route('/table')
+@app.route('/table', methods=['POST', 'GET'])
 def render():
+    gr = ''  # [!!!]
+    if request.method == 'POST':
+        gr = request.form['group_selector']
     dbwork = DBWork('lessons.db')
     schedule = dbwork.select_all('lessons', Schedule)
     schedule.sort(key=lambda x: (x[1], x[2]))
-    return render_template('tables.html', schedule=schedule)
+    return render_template('tables.html', schedule=schedule, gr=gr)
 
 if __name__ == '__main__':
     app.debug = True
