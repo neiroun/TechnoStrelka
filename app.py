@@ -5,12 +5,13 @@ from work_db import *
 app = Flask(__name__)
 frame_r = 0
 stat = '0'
+group = ''
 
 @app.route('/')
 def index():
     return render_template('index.html') #comment to delete
 
-@app.route('/table')
+@app.route('/table', methods=['GET', 'POST'])
 def render():
     global stat
     dbwork = DBWork('lessons.db')
@@ -30,6 +31,7 @@ def reset():
 
 @app.route('/timetable', methods=['GET', 'POST'])
 def timetable():
+    global group
     if request.method == 'GET':
         print('GET')
         return render_template('timetable.html')
@@ -41,10 +43,17 @@ def timetable():
             for j in range(4):
                 schedule_row.append(str(request.form['in'+str(i+1)+str(j+1)]))
             schedule_list.append(schedule_row)
+        #group = str(request.form["group_selector"])
         #ПРИНИМАЕТСЯ СОДЕРЖИМОЕ ИНПУТОВ, КОТОРОЕ НУЖНО РАЗБИТЬ НА СПИСКИ И ЗАКИНУТЬ В update_the_whole_group
         #schedule_list нужно привести к виду, чтобы он содержал элементы одного пункта расписания
+        # 'room, teacher, subject'
+        result_list = []
+        for i in range(5):
+            for j in range(4):
+                info = schedule_list[i][j].split(',')
+                result_list.append(Schedule(j, i, info[0], info[1], group, info[2]))
         dbwork = DBWork('lessons.db')
-        dbwork.update_the_whole_group('lessons', '1П', schedule_list)
+        dbwork.update_the_whole_group('lessons', group, schedule_list)
         print(schedule_list)
         return render_template('timetable.html')
 
