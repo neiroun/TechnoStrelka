@@ -1,4 +1,13 @@
 #but {
-    left: 50%;
-    width: 50px;
+    padding: 0.3%;
+}
+
+#fir{
+    margin-top: 14%;
+    scale: 150%;
+}
+
+#sec{
+    margin-top: 6%;
+    scale: 150%;
 }
