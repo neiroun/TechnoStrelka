@@ -19,7 +19,9 @@ window.onload = () => {
             document.location='table'
         }
         else {
-            alert('Вы ввели неверный пароль')
+            document.getElementById('sign_in').addEventListener('click', function(){
+                Swal.fire("Ой!", "Кажется, что вы ввели неверный пароль, попробуйте еще раз", "error");
+              });
         }
     }
     document.getElementById('sign_like_guest').onclick = () => {

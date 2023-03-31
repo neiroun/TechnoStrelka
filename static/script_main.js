@@ -1,13 +1,30 @@
  window.onload = () => {   
     document.getElementById('table').hidden = true;
-    document.getElementById('back').hidden = true;
+    document.getElementById('back').style.display = 'none';
     document.getElementById('list').style.display = 'none';
+    document.getElementById('delimiter').hidden = false;
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
         document.getElementById('list').style.display = 'block';
         document.getElementById('schedule').style.display = 'none';
-        document.getElementById('back').hidden = false;
+        document.getElementById('back').style.display = 'block';
+        document.getElementById('delimiter').hidden = true;
+        document.getElementById('teacher').style.display = 'none';
     }
+    document.getElementById('back').onclick = () => {
+        document.getElementById('table').hidden = true;
+        document.getElementById('list').style.display = 'none';
+        document.getElementById('schedule').style.display = 'block';
+        document.getElementById('back').style.display = 'none';
+        document.getElementById('delimiter').hidden = false;
+        document.getElementById('teacher').style.display = 'block';
+    }
+    $("#list").bind('change focus', () => {
+        let select = new XMLHttpRequest();
+        var select_val = $(this).val();
+        select.open('POST', "/table?select_val=" + select_val, true);
+        select.send();
+    })
  }
  jQuery(($) => {
     $('.select').on('click', '.select__head', function () {

@@ -144,7 +144,7 @@
     color: #f2f3f4;
 	font-size: 16pt;
 	top: 1%;
-	left: 34%;
+	left: 32%;
 	margin-right: auto;
     position: absolute;
 	border-radius: 10px;
@@ -155,5 +155,69 @@
     inset 0 2px 0 rgba(0, 0, 0, .1);
 }
 #back{
-    background: url('back.png') center center no-repeat;
+	right: 0;
+	top: 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+	border-radius: 10px;
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+	background-size: 80% 80%;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+#back:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+#back:hover {
+    background: rgba(255, 255, 255, 0);
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+	background-size: 80% 80%;
+	border-image: none;
+  }
+#back:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+  }
+#delimiter{
+	border-top: 3px dashed green;
+	margin-top: 3%;
+}
+#teacher{
+	display: block;
+    width: 33%;
+	height: 4%;
+    background: linear-gradient(35deg, rgb(100, 33, 139), rgb(81, 129, 231));
+    border: none;
+    color: #f2f3f4;
+	font-size: 16pt;
+	top: 1%;
+	left: 65.5%;
+	margin-right: auto;
+    position: absolute;
+	border-radius: 10px;
+}
+#teacher:hover{
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, .2),
+    0 2px 0 rgba(225, 225, 225, .4),
+    inset 0 2px 0 rgba(0, 0, 0, .1);
 }
