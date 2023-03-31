@@ -22,7 +22,6 @@ def render():
 def result():
     global stat 
     stat = str(request.args.get('stat'))
-    print(stat)
     return '', 200, {'Content-Type': 'text/plain'}
 
 @app.route('/reset')
