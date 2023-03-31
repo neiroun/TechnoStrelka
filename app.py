@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response, request
 import threading
+from work_db import *
 
 app = Flask(__name__)
 frame_r = 0
@@ -10,7 +11,10 @@ def index():
 
 @app.route('/table')
 def render():
-    return render_template('tables.html', rows=range(1, 6), cols=range(1, 6))
+    dbwork = DBWork('lessons.db')
+    schedule = dbwork.select_all('lessons', Schedule)
+    schedule.sort(key=lambda x: (x[1], x[2]))
+    return render_template('tables.html', schedule=schedule)
 
 if __name__ == '__main__':
     app.debug = True
