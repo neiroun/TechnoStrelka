@@ -27,6 +27,7 @@
             <button id="schedule">Просмотреть расписание</button>
             <button id="teacher">Список учителей</button>
             <button id="About_ass">О нас</button>
+<<<<<<< HEAD
 <!--            <h1>О нас</h1>-->
 <!--            <h4>Состав команды: </h4>-->
 <!--            <h5>-Панкратов Дмитрий</h5>-->
@@ -41,6 +42,13 @@
             width="13%" height="13%" id="foto3">
             <h3 id="fio1">Рослов М.С</h3>
 
+=======
+            <h1>О нас</h1>
+            <h4>Состав команды: </h4>
+            <h5>-Панкратов Дмитрий</h5>
+            <h5>-Ахмедов Эльман</h5>
+            <h5>-Рослов Максим</h5>
+>>>>>>> dda4f8e61dac5cbedc7063e39e070580f85d503c
             <thead>
                 <tr>
                     <th>Занятия</th>
@@ -56,8 +64,14 @@
                     <tr>
                         <td>{{ i + 1 }} пара</td>
                     {% for j in range(5) %}
-
-                        <td> {{ schedule[j][i] + (stat if schedule[j][i] != '' else '') }}</td>
+                        <td> {{ schedule[j][i] + (stat if schedule[j][i] != '' else '') }}
+                            <!--Кнопки-->
+                            {% if schedule[j][i] != '' %}
+                                {% set a = ['i0','i1','i2','i3','i4','i5','i6','i7','i8','i9','i10','i11','i12','i13','i14','i15','i16','i17','i18','i19'] %}
+                                <button name=a[i*5+j]>X</button>
+                            {% endif %}
+                            <!--end-->
+                        </td>
                     {% endfor %}
                     </tr>
                 {% endfor %}

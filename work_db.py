@@ -60,6 +60,14 @@ class DBWork:
         con.commit()
         con.close()
 
+    def delete_by_group(self, table, group_name):
+        con = sqlite3.connect(self.db_name)
+        cur = con.cursor()
+        sql_query = f'DELETE FROM {table} WHERE group_name = {group_name}'
+        cur.execute(sql_query)
+        con.commit()
+        con.close()
+
     def delete_by_timedate(self, table, time, day, group_name):
         con = sqlite3.connect(self.db_name)
         cur = con.cursor()
@@ -79,6 +87,14 @@ class DBWork:
         cur.execute(sql_query)
         con.commit()
         con.close()
+
+    def update_the_whole_group(self, table, group_name, schedule_list):
+
+        self.delete_by_group(table, group_name)
+        for item in schedule_list:
+            self.insert(table, *item)
+
+
 
 class Schedule:
     @staticmethod
@@ -130,3 +146,4 @@ db_work.create_table('lessons')
 # db_work.delete_by_id('lessons', 2)
 print(db_work.select_all('lessons', Schedule))
 print(db_work.select_groups('lessons'))
+
