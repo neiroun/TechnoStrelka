@@ -282,3 +282,22 @@
     0 2px 0 rgba(225, 225, 225, .4),
     inset 0 2px 0 rgba(0, 0, 0, .1);
 }
+
+#foto1{
+    margin-left: 100px;
+}
+
+#foto2{
+    top: 20px;
+    margin-left: 200px;
+}
+
+#foto3{
+    top: 20px;
+    margin-left: 200px;
+}
+
+#fio1{
+    margin-left: 100px;
+}
+
