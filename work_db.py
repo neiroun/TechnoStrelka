@@ -60,6 +60,26 @@ class DBWork:
         con.commit()
         con.close()
 
+    def delete_by_timedate(self, table, time, day, group_name):
+        con = sqlite3.connect(self.db_name)
+        cur = con.cursor()
+        sql_query = f'DELETE FROM {table} WHERE day = {day} AND time = {time} AND group_name = {group_name}'
+        cur.execute(sql_query)
+        con.commit()
+        con.close()
+
+    def update_by_timedate(self, table, schedule):
+        assert isinstance(schedule, Schedule)
+        con = sqlite3.connect(self.db_name)
+        cur = con.cursor()
+        sql_query = f'UPDATE {table} SET ' \
+                    f'room={schedule.room}, teacher={schedule.teacher}, ' \
+                    f'subject={schedule.subject} ' \
+                    f'WHERE day = {schedule.day} AND time = {schedule.time} AND group_name={schedule.group_name}'
+        cur.execute(sql_query)
+        con.commit()
+        con.close()
+
 class Schedule:
     @staticmethod
     def get_description():
