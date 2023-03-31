@@ -4,7 +4,6 @@ window.onload = () => {
     document.getElementById('list').style.display = 'none';
     document.getElementById('delimiter').hidden = false;
     document.getElementById('reload').style.display = 'none';
-    document.getElementById('roslov').style.display = 'none';
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
         document.getElementById('list').style.display = 'block';
@@ -13,7 +12,6 @@ window.onload = () => {
         document.getElementById('delimiter').hidden = true;
         document.getElementById('teacher').style.display = 'none';
         document.getElementById('reload').style.display = 'block';
-        document.getElementById('roslov').style.display = 'none';
         document.getElementById('About_ass').style.display = 'none';
     }
     document.getElementById('back').onclick = () => {
@@ -25,9 +23,6 @@ window.onload = () => {
         document.getElementById('teacher').style.display = 'block';
         document.getElementById('reload').style.display = 'none';
         document.getElementById('About_ass').style.display = 'block';
-    }
-    document.getElementById('About_ass').onclick = () => {
-        document.getElementById('roslov').style.display = 'block';
     }
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
