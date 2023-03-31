@@ -8,7 +8,7 @@ stat = '0'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html') #comment to delete
 
 @app.route('/table')
 def render():
