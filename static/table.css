@@ -296,7 +296,7 @@
     margin-left: 200px;
 }
 
-#left_text, #middle_text, #right_text{
+#fio1, #name1, #name2{
   float:left;
   padding-left: 198px;
   font-family: Verdana;
@@ -307,7 +307,7 @@
   text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372, -1px -1px #732372, 3px 3px 6px rgba(0,0,0,.5);
 }
 
-#middle_text {
+#name1 {
     padding-left: 230px;
     padding-right: 27px;
 }
@@ -317,7 +317,7 @@ body {
   background: #f9f9f9;
 }
 
-#ytata {
+#edit {
   font-family: helvetica;
   text-transform: uppercase;
   text-align: center;
@@ -337,7 +337,7 @@ body {
 
 }
 
-#team{
+#name3{
     font-size: 20px;
     font-family: URW Chancery L, cursive;
     padding-top: 80px;

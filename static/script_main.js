@@ -1,9 +1,23 @@
+let button = localStorage.getItem('button');
+console.log(button);
+
 window.onload = () => {  
     document.getElementById('table').hidden = true;
     document.getElementById('back').style.display = 'none';
     document.getElementById('list').style.display = 'none';
     document.getElementById('delimiter').hidden = false;
     document.getElementById('reload').style.display = 'none';
+    document.getElementById('foto1').style.display = 'none';
+    document.getElementById('foto2').style.display = 'none';
+    document.getElementById('foto3').style.display = 'none';
+    document.getElementById('fio1').style.display = 'none';
+//    document.getElementById('aboba').style.display = 'none';
+    //document.getElementById('sostav').style.display = 'none';
+    document.getElementById('name1').style.display = 'none';
+    document.getElementById('name2').style.display = 'none';
+    document.getElementById('name3').style.display = 'none';
+    document.getElementById('edit').style.display = 'none';
+
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
         document.getElementById('list').style.display = 'block';
@@ -13,6 +27,20 @@ window.onload = () => {
         document.getElementById('teacher').style.display = 'none';
         document.getElementById('reload').style.display = 'block';
         document.getElementById('About_ass').style.display = 'none';
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('foto1').style.display = 'none';
+        document.getElementById('foto2').style.display = 'none';
+        document.getElementById('foto3').style.display = 'none';
+        document.getElementById('fio1').style.display = 'none';
+        //document.getElementById('aboba').style.display = 'none';
+        //document.getElementById('sostav').style.display = 'none';
+        document.getElementById('name1').style.display = 'none';
+        document.getElementById('name2').style.display = 'none';
+        document.getElementById('name3').style.display = 'none';
+        document.getElementById('edit').style.display = 'none';
+        if (button === '1'){
+            document.getElementById('edit').style.display = 'block';
+        }
     }
     document.getElementById('back').onclick = () => {
         document.getElementById('table').hidden = true;
@@ -23,11 +51,29 @@ window.onload = () => {
         document.getElementById('teacher').style.display = 'block';
         document.getElementById('reload').style.display = 'none';
         document.getElementById('About_ass').style.display = 'block';
+        if (button === '1'){
+            document.getElementById('edit').style.display = 'none';
+        }
     }
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
         req.open('GET', '/result?stat=' + document.getElementById('group_selector').value, true);
         req.send();
+    }
+    document.getElementById('About_ass').onclick = () => {
+        document.getElementById('foto1').style.display = 'block';
+        document.getElementById('foto2').style.display = 'block';
+        document.getElementById('foto3').style.display = 'block';
+        document.getElementById('fio1').style.display = 'block';
+        //document.getElementById('aboba').style.display = 'block';
+        //document.getElementById('sostav').style.display = 'block';
+        document.getElementById('name1').style.display = 'block';
+        document.getElementById('name2').style.display = 'block';
+        document.getElementById('name3').style.display = 'block';
+        document.getElementById('edit').style.display = 'block';
+    }
+    document.getElementById('edit').onclick = () => {
+        document.location='reset'
     }
  }
  jQuery(($) => {
