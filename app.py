@@ -51,7 +51,11 @@ def timetable():
         for i in range(5):
             for j in range(4):
                 info = schedule_list[i][j].split(',')
-                result_list.append(Schedule(j, i, info[0], info[1], group, info[2]))
+                if len(info) == 3:
+                    print(info)
+                    result_list.append(Schedule(j, i, info[0], info[1], group, info[2]))
+        print(result_list)
+        print('********************')
         dbwork = DBWork('lessons.db')
         dbwork.update_the_whole_group('lessons', group, schedule_list)
         print(schedule_list)
