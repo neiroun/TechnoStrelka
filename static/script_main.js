@@ -13,11 +13,14 @@ window.onload = () => {
     document.getElementById('fio1').style.display = 'none';
     document.getElementById('aboba').style.display = 'none';
     document.getElementById('sostav').style.display = 'none';
+//    document.getElementById('aboba').style.display = 'none';
+    //document.getElementById('sostav').style.display = 'none';
     document.getElementById('name1').style.display = 'none';
     document.getElementById('name2').style.display = 'none';
     document.getElementById('name3').style.display = 'none';
     document.getElementById('edit').style.display = 'none';
     
+
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
         document.getElementById('list').style.display = 'block';
@@ -37,6 +40,12 @@ window.onload = () => {
         document.getElementById('name1').style.display = 'none';
         document.getElementById('name2').style.display = 'none';
         document.getElementById('name3').style.display = 'none';
+        //document.getElementById('aboba').style.display = 'none';
+        //document.getElementById('sostav').style.display = 'none';
+        document.getElementById('name1').style.display = 'none';
+        document.getElementById('name2').style.display = 'none';
+        document.getElementById('name3').style.display = 'none';
+        document.getElementById('edit').style.display = 'none';
         if (button === '1'){
             document.getElementById('edit').style.display = 'block';
         }
@@ -69,6 +78,12 @@ window.onload = () => {
         document.getElementById('name1').style.display = 'block';
         document.getElementById('name2').style.display = 'block';
         document.getElementById('name3').style.display = 'block';
+        //document.getElementById('aboba').style.display = 'block';
+        //document.getElementById('sostav').style.display = 'block';
+        document.getElementById('name1').style.display = 'block';
+        document.getElementById('name2').style.display = 'block';
+        document.getElementById('name3').style.display = 'block';
+        document.getElementById('edit').style.display = 'block';
     }
     document.getElementById('edit').onclick = () => {
         document.location='reset'

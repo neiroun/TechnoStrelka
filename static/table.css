@@ -283,6 +283,7 @@
     inset 0 2px 0 rgba(0, 0, 0, .1);
 }
 
+<<<<<<< HEAD
 #edit{
     text-decoration: none;
     color: black;
@@ -327,3 +328,66 @@
     top: auto;
     height: 100%;
   }
+=======
+#foto1{
+
+    margin-left: 170px;
+}
+
+#foto2{
+    margin-left: 200px;
+}
+
+#foto3{
+    margin-left: 200px;
+}
+
+#fio1, #name1, #name2{
+  float:left;
+  padding-left: 198px;
+  font-family: Verdana;
+  font-weight: normal;
+  font-top: 560px;
+  color: linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+  color: -webkit-linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+  text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372, -1px -1px #732372, 3px 3px 6px rgba(0,0,0,.5);
+}
+
+#name1 {
+    padding-left: 230px;
+    padding-right: 27px;
+}
+
+
+body {
+  background: #f9f9f9;
+}
+
+#edit {
+  font-family: helvetica;
+  text-transform: uppercase;
+  text-align: center;
+  color: #991199;
+  text-shadow: #98ff98 3px 5px 0,
+               #999 4px 6px 3px,
+               #ccc 8px 11px 10px;
+}
+
+#letterpress {
+  background: #999;
+  color: transparent;
+  text-shadow: 0px 1px 3px rgb(250,250,250,0.95);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+}
+
+#name3{
+    font-size: 20px;
+    font-family: URW Chancery L, cursive;
+    padding-top: 80px;
+    padding-left: 50px;
+    color: #7fe119;
+}
+>>>>>>> 41d58785eba8c2bf66ac25d823b8af87d173790b
