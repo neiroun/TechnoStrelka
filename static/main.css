@@ -49,7 +49,7 @@ body{
 }
 
 #login {
-    position: relative;
+    position: absolute;
     display: block;
     top: 55%;
     left: 33%;
@@ -77,20 +77,24 @@ body{
 }
 
 #sign_in {
+    position: absolute;
+    text-decoration: none;
+    margin-top: 35%;
+    margin-left: 39%;
     display: block;
-    top: 69%;
-    left: 40%;
-    background: linear-gradient(35deg, rgb(100, 33, 139), rgb(81, 129, 231));
-    border: none;
-    color: #f2f3f4;
-    position: fixed;
-    border-radius: 16px;
+    /* padding: 15px 30px; */
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+    transition: .15s ease-in-out;
 }
 
 #sign_in:hover {
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, .2),
-    0 2px 0 rgba(225, 225, 225, .4),
-    inset 0 2px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+    color: #F137A6;
 }
 
 #sign_like_guest {

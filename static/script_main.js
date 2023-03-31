@@ -5,7 +5,8 @@
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
         document.getElementById('list').style.display = 'block';
-        document.getElementById('schedule').hidden = true;
+        document.getElementById('schedule').style.display = 'none';
+        document.getElementById('back').hidden = false;
     }
  }
  jQuery(($) => {
