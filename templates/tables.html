@@ -42,7 +42,7 @@
                         <td>{{ i + 1 }} пара</td>
                     {% for j in range(5) %}
 
-                        <td> {{ schedule[j][i] + (gr if schedule[j][i] != '' else '') }}</td>
+                        <td> {{ schedule[j][i] + (stat if schedule[j][i] != '' else '') }}</td>
                     {% endfor %}
                     </tr>
                 {% endfor %}
