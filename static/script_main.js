@@ -1,4 +1,4 @@
-window.onload = () => {   
+window.onload = () => {  
     document.getElementById('table').hidden = true;
     document.getElementById('back').style.display = 'none';
     document.getElementById('list').style.display = 'none';
@@ -12,6 +12,7 @@ window.onload = () => {
         document.getElementById('delimiter').hidden = true;
         document.getElementById('teacher').style.display = 'none';
         document.getElementById('reload').style.display = 'block';
+        document.getElementById('About_ass').style.display = 'none';
     }
     document.getElementById('back').onclick = () => {
         document.getElementById('table').hidden = true;
@@ -21,6 +22,7 @@ window.onload = () => {
         document.getElementById('delimiter').hidden = false;
         document.getElementById('teacher').style.display = 'block';
         document.getElementById('reload').style.display = 'none';
+        document.getElementById('About_ass').style.display = 'block';
     }
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
