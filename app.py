@@ -17,12 +17,16 @@ def render():
     schedule = dbwork.select_all('lessons', Schedule)
     schedule.sort(key=lambda x: (x[1], x[2]))
     return render_template('tables.html', schedule=schedule, stat=stat)
+
 @app.route ('/result')
 def result():
     global stat 
     stat = str(request.args.get('stat'))
     return '', 200, {'Content-Type': 'text/plain'}
-    
+
+@app.route('/reset')
+def reset():
+    return render_template('reset.html')
 
 if __name__ == '__main__':
     app.debug = True
