@@ -26,7 +26,7 @@ def result():
 
 @app.route('/reset')
 def reset():
-    return render_template('reset.html')
+    return render_template('timetable.html')
 
 @app.route('/timetable', methods=['GET', 'POST'])
 def timetable():
