@@ -175,6 +175,7 @@
     letter-spacing: 2px;
     transition: .8s cubic-bezier(.165, .84, .44, 1);
   }
+
 #back:before {
     content: "";
     position: absolute;
@@ -187,6 +188,7 @@
     background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
     transition: .8s cubic-bezier(.165, .84, .44, 1);
   }
+
 #back:hover {
     background: rgba(255, 255, 255, 0);
     background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
@@ -327,3 +329,67 @@
     top: auto;
     height: 100%;
   }
+
+#foto1, #foto2, #foto3{
+    float: left;
+}
+
+#foto1{
+    margin-left: 200px;
+}
+
+#foto2{
+    margin-left: 200px;
+}
+
+#foto3{
+    margin-left: 200px;
+}
+
+#left_text, #middle_text, #right_text{
+  float:left;
+  padding-left: 238px;
+  font-family: Verdana;
+  font-weight: normal;
+  font-top: 560px;
+  color: linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+  color: -webkit-linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+  text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372, -1px -1px #732372, 3px 3px 6px rgba(0,0,0,.5);
+}
+
+#middle_text {
+    padding-left: 246px;
+    padding-right: 3px;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+#ytata {
+  font-family: helvetica;
+  text-transform: uppercase;
+  text-align: center;
+  color: #991199;
+  text-shadow: #98ff98 3px 5px 0,
+               #999 4px 6px 3px,
+               #ccc 8px 11px 10px;
+}
+
+#letterpress {
+  background: #999;
+  color: transparent;
+  text-shadow: 0px 1px 3px rgb(250,250,250,0.95);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+}
+
+#team{
+    font-size: 20px;
+    font-family: URW Chancery L, cursive;
+    padding-top: 400px;
+    padding-left: 50px;
+    color: #7fe119;
+}
