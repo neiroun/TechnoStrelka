@@ -3,6 +3,8 @@ console.log(button);
 
 window.onload = () => {  
     document.getElementById('table').hidden = true;
+    document.getElementById('table_team').hidden = true;
+    document.getElementById('schedule_block').hidden = true;
     document.getElementById('back').style.display = 'none';
     document.getElementById('list').style.display = 'none';
     document.getElementById('delimiter').hidden = false;
@@ -19,6 +21,8 @@ window.onload = () => {
     
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
+        document.getElementById('table_team').hidden = true;
+        document.getElementById('schedule_block').hidden = false;
         document.getElementById('list').style.display = 'block';
         document.getElementById('schedule').style.display = 'none';
         document.getElementById('back').style.display = 'block';
@@ -41,6 +45,8 @@ window.onload = () => {
     }
     document.getElementById('back').onclick = () => {
         document.getElementById('table').hidden = true;
+        document.getElementById('table_team').hidden = true;
+        document.getElementById('schedule_block').hidden = true;
         document.getElementById('list').style.display = 'none';
         document.getElementById('schedule').style.display = 'block';
         document.getElementById('back').style.display = 'none';
@@ -62,6 +68,9 @@ window.onload = () => {
         }
     }
     document.getElementById('About_ass').onclick = () => {
+        document.getElementById('table_team').hidden = false;
+        document.getElementById('table').hidden = true;
+        document.getElementById('schedule_block').hidden = true;
         document.getElementById('ytata').style.display = 'block';
         document.getElementById('foto1').style.display = 'block';
         document.getElementById('foto2').style.display = 'block';
