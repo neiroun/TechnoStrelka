@@ -10,6 +10,14 @@ window.onload = () => {
     document.getElementById('edit').style.display = 'none';
     document.getElementById('rounded').style.display = 'none';
     document.getElementById('edit1').style.display = 'none';
+    document.getElementById('ytata').style.display = 'none';
+    document.getElementById('foto1').style.display = 'none';
+    document.getElementById('foto2').style.display = 'none';
+    document.getElementById('foto3').style.display = 'none';
+    document.getElementById('left_text').style.display = 'none';
+    document.getElementById('middle_text').style.display = 'none';
+    document.getElementById('right_text').style.display = 'none';
+    document.getElementById('team').style.display = 'none';
     
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
@@ -21,6 +29,14 @@ window.onload = () => {
         document.getElementById('reload').style.display = 'block';
         document.getElementById('About_ass').style.display = 'none';
         document.getElementById('reload').style.display = 'block';
+        document.getElementById('ytata').style.display = 'none';
+        document.getElementById('foto1').style.display = 'none';
+        document.getElementById('foto2').style.display = 'none';
+        document.getElementById('foto3').style.display = 'none';
+        document.getElementById('left_text').style.display = 'none';
+        document.getElementById('middle_text').style.display = 'none';
+        document.getElementById('right_text').style.display = 'none';
+        document.getElementById('team').style.display = 'none';
         if (button === '1'){
             document.getElementById('edit').style.display = 'block';
         }
@@ -37,6 +53,17 @@ window.onload = () => {
         document.getElementById('rounded').style.display = 'none';
         document.getElementById('edit1').style.display = 'none';
     }
+    document.getElementById('About_ass').onclick = () => {
+        document.getElementById('ytata').style.display = 'block';
+        document.getElementById('foto1').style.display = 'block';
+        document.getElementById('foto2').style.display = 'block';
+        document.getElementById('foto3').style.display = 'block';
+        document.getElementById('left_text').style.display = 'block';
+        document.getElementById('middle_text').style.display = 'block';
+        document.getElementById('right_text').style.display = 'block';
+        document.getElementById('team').style.display = 'block';
+    }
+
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
         req.open('GET', '/result?stat=' + document.getElementById('group_selector').value, true);
