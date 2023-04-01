@@ -14,8 +14,10 @@ def index():
 @app.route('/table', methods=['GET', 'POST'])
 def render():
     global stat
+    print(stat)
     dbwork = DBWork('lessons.db')
-    schedule = dbwork.select_all('lessons', Schedule)
+    dbwork.db_items = Schedule.get_description()
+    schedule = dbwork.select_all('lessons', Schedule, stat)
     schedule.sort(key=lambda x: (x[1], x[2]))
     return render_template('tables.html', schedule=schedule, stat=stat)
 
@@ -23,15 +25,21 @@ def render():
 def result():
     global stat 
     stat = str(request.args.get('stat'))
+    print('STAT: ', stat)
     return '', 200, {'Content-Type': 'text/plain'}
 
-@app.route('/reset')
-def reset():
-    return render_template('timetable.html')
+# @app.route('/reset', methods=['GET', 'POST'])
+# def reset():
+#     if request.method == 'POST':
+#         global stat
+#         dbwork = DBWork('lessons.db')
+#         schedule = dbwork.select_all('lessons', Schedule, stat)
+#         schedule.sort(key=lambda x: (x[1], x[2]))
+#         return render_template('tables.html', schedule=schedule, stat=stat)
+#     return render_template('timetable.html')
 
-@app.route('/timetable', methods=['GET', 'POST'])
+@app.route('/reset', methods=['GET', 'POST'])
 def timetable():
-    global group
     if request.method == 'GET':
         print('GET')
         return render_template('timetable.html')
@@ -53,11 +61,12 @@ def timetable():
                 info = schedule_list[i][j].split(',')
                 if len(info) == 3:
                     print(info)
-                    result_list.append(Schedule(j, i, info[0], info[1], group, info[2]))
+                    result_list.append([j, i, info[0], info[1], stat, info[2]])
         print(result_list)
         print('********************')
         dbwork = DBWork('lessons.db')
-        dbwork.update_the_whole_group('lessons', group, schedule_list)
+        dbwork.db_items = Schedule.get_description()
+        dbwork.update_the_whole_group('lessons', stat, result_list)
         print(schedule_list)
         return render_template('timetable.html')
 
