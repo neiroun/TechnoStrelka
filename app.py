@@ -7,7 +7,9 @@ app = Flask(__name__)
 frame_r = 0
 stat = '0'
 group = ''
+id = ''
 teachers = list()
+schedule = None
 
 with open('static/teach.csv', 'r', encoding="utf-8") as file:
     reader = csv.reader(file, delimiter=";", quotechar='"')
@@ -21,9 +23,59 @@ def index():
 def reg():
     return render_template('reg.html')
 
+@app.route('/del')
+def delet():
+    global id, schedule, stat, teachers 
+    id = int(request.args.get('id'))
+    with open('static/teach.csv', 'r', encoding='utf-8') as file:
+                reader = csv.reader(file, delimiter=';')
+                user_info = list(reader)[1:]
+                print(user_info)
+
+    if id <= len(user_info):
+        cnt = 1
+        for i in user_info:
+            if int(i[0]) == id:
+                del user_info[user_info.index(i)]
+                print('ok')
+                print(user_info)
+        for i in user_info:
+            i[0] = str(cnt)
+            cnt += 1
+        file.close()
+    with open('static/teach.csv', 'w', encoding='utf-8') as file:
+                    file.write(f'"id";"ФИО";"Предмет";\n')
+                    for i in user_info:
+                        if i != user_info[-1]:
+                            file.write(f'"{i[0]}";"{i[1]}";"{i[2]}"\n')
+                        else:
+                            file.write(
+                                f'"{i[0]}";"{i[1]}";"{i[2]}"')
+                    file.close()
+    with open('static/teach.csv', 'r', encoding="utf-8") as file:
+        reader = csv.reader(file, delimiter=";", quotechar='"')
+        teachers = list(reader)[1:]
+    return render_template('tables.html', schedule=schedule, stat=stat, teachers=teachers, val=len(teachers))
+
+@app.route('/add')
+def add():
+    global id, schedule, stat, teachers 
+    FIO = str(request.args.get('FIO'))
+    object = str(request.args.get('obj'))
+    with open('static/teach.csv', 'r', encoding='utf-8') as file:
+                reader = csv.reader(file, delimiter=';')
+                user_info = list(reader)[1:]
+    with open('static/teach.csv', 'a', encoding='utf-8') as file:
+            file.write(f'\n"{int(user_info[-1][0]) + 1}";"{FIO}";"{object}"')
+    with open('static/teach.csv', 'r', encoding="utf-8") as file:
+        reader = csv.reader(file, delimiter=";", quotechar='"')
+        teachers = list(reader)[1:]
+    return render_template('tables.html', schedule=schedule, stat=stat, teachers=teachers, val=len(teachers))
+
+
 @app.route('/table', methods=['GET', 'POST'])
 def render():
-    global stat
+    global stat, teachers, schedule
     print(stat)
     dbwork = DBWork('lessons.db')
     dbwork.db_items = Schedule.get_description()
