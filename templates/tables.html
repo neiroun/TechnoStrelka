@@ -27,24 +27,51 @@
         <a href="" class="sliding-button" id="back"></a>
         <hr id="delimiter">
         <table class="table" id="table">
-            <caption>Расписание групп</caption>
             <button id="reload">Обновить</button>
             <button id="edit">Редактировать</button>
             <button id="edit1">Редактировать</button>
             <button id="schedule">Просмотреть расписание</button>
             <button id="teacher">Список учителей</button>
             <button id="About_ass">О нас</button>
-            <h1 id="ytata">Мы команда "Утята" из города Арзамас</h1>
-            <img src="https://sun9-23.userapi.com/impg/qcAWYJjqp1l0BAPPJdToisOfphCS509mmrSvcQ/bRoPcpS5zas.jpg?size=400x500&quality=96&sign=cbdb1e230ac7f40d18001828c75b940c&type=album"
-            width="15%" height="15%" id="foto1">
-            <img src="https://sun9-10.userapi.com/impg/imnBoZ9ZEm6WHUnaT_Zm4Lm6db4J2GfTsdvVEg/G3HhdgHwpKY.jpg?size=400x500&quality=96&sign=bbca636ee31855e03b65f57397fded7e&type=album"
-            width="15%" height="15%" id="foto2">
-            <img src="https://sun9-52.userapi.com/impg/hM8pIZUFrwHOQleK-y63NbbTUV8qIbKiecUx4w/BBMw9l8X2IU.jpg?size=400x500&quality=96&sign=006973e16160c8d6681913fdf49c8fee&type=album"
-            width="15%" height="15%" id="foto3">
-            <h2 id="left_text">Рослов М.С.</h2>
-            <h2 id="middle_text" >Панкратов Д.Н.</h2>
-            <h2 id="right_text">Ахмедов Э.Т.</h2>
-            <h3 id="team">Мы команда ЦЦОД IT-куб г. Арзамас. Мы крутые креативные ребята, которые готовы удивлять вас своими бомбезными проектами и идеями!</h3>
+
+<!--            <h1 id="ytata">Мы команда "Утята" из города Арзамас</h1>-->
+<!--            <img src="https://sun9-23.userapi.com/impg/qcAWYJjqp1l0BAPPJdToisOfphCS509mmrSvcQ/bRoPcpS5zas.jpg?size=400x500&quality=96&sign=cbdb1e230ac7f40d18001828c75b940c&type=album"-->
+<!--            width="15%" height="15%" id="foto1">-->
+<!--            <img src="https://sun9-10.userapi.com/impg/imnBoZ9ZEm6WHUnaT_Zm4Lm6db4J2GfTsdvVEg/G3HhdgHwpKY.jpg?size=400x500&quality=96&sign=bbca636ee31855e03b65f57397fded7e&type=album"-->
+<!--            width="15%" height="15%" id="foto2">-->
+<!--            <img src="https://sun9-52.userapi.com/impg/hM8pIZUFrwHOQleK-y63NbbTUV8qIbKiecUx4w/BBMw9l8X2IU.jpg?size=400x500&quality=96&sign=006973e16160c8d6681913fdf49c8fee&type=album"-->
+<!--            width="15%" height="15%" id="foto3">-->
+<!--            <h2 id="left_text">Рослов М.С.</h2>-->
+<!--            <h2 id="middle_text" >Панкратов Д.Н.</h2>-->
+<!--            <h2 id="right_text">Ахмедов Э.Т.</h2>-->
+            <table id="table_team">
+                <tr>
+                    <td colspan="3">
+                        <h1 id="ytata">Мы команда "Утята" из города Арзамас</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><img src="https://sun9-23.userapi.com/impg/qcAWYJjqp1l0BAPPJdToisOfphCS509mmrSvcQ/bRoPcpS5zas.jpg?size=400x500&quality=96&sign=cbdb1e230ac7f40d18001828c75b940c&type=album"
+            id="foto1"></td>
+                    <td align="center"><img src="https://sun9-10.userapi.com/impg/imnBoZ9ZEm6WHUnaT_Zm4Lm6db4J2GfTsdvVEg/G3HhdgHwpKY.jpg?size=400x500&quality=96&sign=bbca636ee31855e03b65f57397fded7e&type=album"
+            id="foto2"></td>
+                    <td align="center"><img src="https://sun9-52.userapi.com/impg/hM8pIZUFrwHOQleK-y63NbbTUV8qIbKiecUx4w/BBMw9l8X2IU.jpg?size=400x500&quality=96&sign=006973e16160c8d6681913fdf49c8fee&type=album"
+            id="foto3"></td>
+                </tr>
+                <tr>
+                    <td><h2 id="left_text">Рослов М.С.</h2></td>
+                    <td><h2 id="middle_text" >Панкратов Д.Н.</h2></td>
+                    <td><h2 id="right_text">Ахмедов Э.Т.</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+            <h3 id="team">Мы команда ЦЦОД IT-куб г. Арзамас. Мы крутые креативные ребята, которые готовы удивлять вас своими бомбезными проектами и идеями!</h3></td>
+                </tr>
+            </table>
+
+            <div>
+                <table class="table" id="schedule_block">
+            <caption>Расписание групп</caption>
             <thead>
                 <tr>
                     <th>Занятия</th>
@@ -72,5 +99,6 @@
                     </tr>
                 {% endfor %}
             </tbody>
+                </table>
         </table>
     </body>

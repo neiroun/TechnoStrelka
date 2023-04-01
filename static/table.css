@@ -416,24 +416,11 @@ html{
     }
 
 #foto1, #foto2, #foto3{
-    float: left;
+    float: center;
 }
 
-#foto1{
-    margin-left: 200px;
-}
-
-#foto2{
-    margin-left: 200px;
-}
-
-#foto3{
-    margin-left: 200px;
-}
 
 #left_text, #middle_text, #right_text{
-  float:left;
-  padding-left: 238px;
   font-family: Verdana;
   font-weight: normal;
   font-top: 560px;
@@ -443,8 +430,7 @@ html{
 }
 
 #middle_text {
-    padding-left: 246px;
-    padding-right: 3px;
+    text-align: center;
 }
 
 body {
@@ -477,4 +463,13 @@ body {
     padding-top: 400px;
     padding-left: 50px;
     color: #7fe119;
+}
+
+table, th, td {
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
