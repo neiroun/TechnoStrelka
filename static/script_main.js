@@ -88,6 +88,14 @@ window.onload = () => {
         document.getElementById('teacher').style.display = 'none';
         document.getElementById('About_ass').style.display = 'none';
         document.getElementById('rounded').style.display = 'block';
+        document.getElementById('ytata').style.display = 'none';
+        document.getElementById('foto1').style.display = 'none';
+        document.getElementById('foto2').style.display = 'none';
+        document.getElementById('foto3').style.display = 'none';
+        document.getElementById('left_text').style.display = 'none';
+        document.getElementById('middle_text').style.display = 'none';
+        document.getElementById('right_text').style.display = 'none';
+        document.getElementById('team').style.display = 'none';
         if (button === '1'){
             document.getElementById('edit1').style.display = 'block';
         }
