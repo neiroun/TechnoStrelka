@@ -19,12 +19,18 @@
                 <li class="select__item">4П</li>
             </ul>
         </div>
+        <ol class="rounded" id="rounded">
+            {% for i in range(val) %}
+                <li><a href="#">{{ teachers[i][1] + ' - ' + teachers[i][2] }}</a></li>
+            {% endfor %}
+        </ol>
         <a href="" class="sliding-button" id="back"></a>
         <hr id="delimiter">
         <table class="table" id="table">
             <caption>Расписание групп</caption>
             <button id="reload">Обновить</button>
             <button id="edit">Редактировать</button>
+            <button id="edit1">Редактировать</button>
             <button id="schedule">Просмотреть расписание</button>
             <button id="teacher">Список учителей</button>
             <button id="About_ass">О нас</button>

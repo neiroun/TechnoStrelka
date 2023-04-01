@@ -1,15 +1,25 @@
 from flask import Flask, render_template, Response, request
 import threading
 from work_db import *
+import csv
 
 app = Flask(__name__)
 frame_r = 0
 stat = '0'
 group = ''
+teachers = list()
+
+with open('static/teach.csv', 'r', encoding="utf-8") as file:
+    reader = csv.reader(file, delimiter=";", quotechar='"')
+    teachers = list(reader)[1:]
 
 @app.route('/')
 def index():
     return render_template('index.html') #comment to delete
+
+@app.route('/reg')
+def reg():
+    return render_template('reg.html')
 
 @app.route('/table', methods=['GET', 'POST'])
 def render():
@@ -17,12 +27,13 @@ def render():
     dbwork = DBWork('lessons.db')
     schedule = dbwork.select_all('lessons', Schedule)
     schedule.sort(key=lambda x: (x[1], x[2]))
-    return render_template('tables.html', schedule=schedule, stat=stat)
+    return render_template('tables.html', schedule=schedule, stat=stat, teachers=teachers, val=len(teachers))
 
 @app.route ('/result')
 def result():
     global stat 
     stat = str(request.args.get('stat'))
+    print(stat)
     return '', 200, {'Content-Type': 'text/plain'}
 
 @app.route('/reset')

@@ -3,6 +3,9 @@
     --select-focus: blue;
     --select-arrow: var(--select-border);
 }
+html{
+    background: url(bg1.png);
+}
 .table {
 	width: 100%;
 	border: none;
@@ -327,3 +330,85 @@
     top: auto;
     height: 100%;
   }
+  .rounded {
+    counter-reset: li; 
+    list-style: none; 
+	margin-top: 7%;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+    .rounded a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+    }
+    .rounded a:hover {background: #E9E4E0;}
+    .rounded a:hover:before {transform: rotate(360deg);}
+    .rounded a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+    }
+#edit1{
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    left: 5.5%;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+    border-radius: 10px;
+    background-size: 80% 80%;
+    width: 10%;
+    bottom: 50%;
+    left: 88%;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#edit1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#edit1:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #f2f3f4;
+    border-image: none;
+    }
+#edit1:hover:before {
+    color: #f2f3f4;
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+    }

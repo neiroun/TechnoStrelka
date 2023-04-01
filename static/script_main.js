@@ -8,6 +8,8 @@ window.onload = () => {
     document.getElementById('delimiter').hidden = false;
     document.getElementById('reload').style.display = 'none';
     document.getElementById('edit').style.display = 'none';
+    document.getElementById('rounded').style.display = 'none';
+    document.getElementById('edit1').style.display = 'none';
     
     document.getElementById('schedule').onclick = function(){
         document.getElementById('table').hidden = false;
@@ -32,9 +34,8 @@ window.onload = () => {
         document.getElementById('teacher').style.display = 'block';
         document.getElementById('reload').style.display = 'none';
         document.getElementById('About_ass').style.display = 'block';
-        if (button === '1'){
-            document.getElementById('edit').style.display = 'none';
-        }
+        document.getElementById('rounded').style.display = 'none';
+        document.getElementById('edit1').style.display = 'none';
     }
     document.getElementById('reload').onclick = () => {
         let req = new XMLHttpRequest();
@@ -43,6 +44,20 @@ window.onload = () => {
     }
     document.getElementById('edit').onclick = () => {
         document.location='reset'
+    }
+    document.getElementById('teacher').onclick = () => {
+        document.getElementById('schedule').style.display = 'none';
+        document.getElementById('back').style.display = 'block';
+        document.getElementById('delimiter').hidden = true;
+        document.getElementById('teacher').style.display = 'none';
+        document.getElementById('About_ass').style.display = 'none';
+        document.getElementById('rounded').style.display = 'block';
+        if (button === '1'){
+            document.getElementById('edit1').style.display = 'block';
+        }
+    }
+    document.getElementById('edit1').onclick = () => {
+        document.location='reg'
     }
  }
  jQuery(($) => {
