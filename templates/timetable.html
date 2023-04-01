@@ -5,8 +5,10 @@
     <title>Расписание</title>
     <link rel="shortcut icon" href="/static/logo.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='timetable.css') }}">
+    <script src="{{ url_for('static', filename='script_timetable.js') }}"></script>
 </head>
 <body>
+    <button class="sliding-button" id="back"></button>
     <form class="form" method="post">
     <table id="fir">
     <tr><th>Понедельник</th><th>Вторник</th><th>Среда</th></tr>
@@ -24,5 +26,6 @@
     </table>
     <button type="submit" class="btn btn-primary" id="submit_button">Заполнить данные</button>
     </form>
+
 </body>
 </html>
