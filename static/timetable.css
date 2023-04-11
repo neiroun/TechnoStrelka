@@ -1,0 +1,92 @@
+html{
+    background: url(https://abrakadabra.fun/uploads/posts/2022-01/1642879192_1-abrakadabra-fun-p-fon-na-shkolnuyu-temu-1.jpg) center center no-repeat;
+    background-size: cover;
+
+
+}
+
+#but {
+    padding: 0.3%;
+    margin-top: 0.4%;
+
+}
+
+#fir{
+    margin-top: 10%;
+    scale: 150%;
+    margin-left: 31%;
+    display: inline-block; /* this has been added */
+    border-radius: 10px;
+    background-color: #008B8B;
+    color: #00FA9A;
+    border: 5px solid white;
+}
+
+#sec{
+    margin-top: 7%;
+    scale: 150%;
+    margin-left: 36%;
+    display: inline-block; /* this has been added */
+    border-radius: 10px;
+    background-color: #008B8B;
+    color: #00FA9A;
+    border: 5px solid white;
+}
+
+#submit_button {
+    position: absolute;
+    text-decoration: none;
+    margin-top: 2%;
+    width: 10%;
+    margin-left: 42.5%;
+    display: block;
+    /* padding: 15px 30px; */
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+
+#submit_button:hover {
+    box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+    color: #F137A6;
+}
+
+#back{
+	right: 0;
+	top: 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+	border-radius: 10px;
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+	background-size: 80% 80%;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+
+#back:hover {
+    background: rgba(255, 255, 255, 0);
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+	background-size: 80% 80%;
+	border-image: none;
+  }
+
+#back:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+  }
+

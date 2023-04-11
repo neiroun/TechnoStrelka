@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание</title>
+    <link rel="shortcut icon" href="/static/logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='timetable.css') }}">
+    <script src="{{ url_for('static', filename='script_timetable.js') }}"></script>
+</head>
+<body>
+    <button class="sliding-button" id="back"></button>
+    <form class="form" method="post">
+    <table id="fir">
+    <tr><th>Понедельник</th><th>Вторник</th><th>Среда</th></tr>
+        <tr><td><input name="in11" id="in11"></td><td><input name="in21" id=="in21"></td><td><input name="in31" id="in31"></td></tr>
+        <tr><td><input name="in12" id="in12"></td><td><input name="in22" id=="in22"></td><td><input name="in32" id="in32"></td></tr>
+        <tr><td><input name="in13" id="in13"></td><td><input name="in23" id=="in23"></td><td><input name="in33" id="in33"></td></tr>
+        <tr><td><input name="in14" id="in14"></td><td><input name="in24" id=="in24"></td><td><input name="in34" id="in34"></td></tr>
+    </table>
+    <table id="sec">
+    <tr><th>Четверг</th><th>Пятница</th></tr>
+        <tr><td><input name="in41" id="in41"></td><td><input name="in51" id="in51"></td></tr>
+        <tr><td><input name="in42" id="in42"></td><td><input name="in52" id="in52"></td></tr>
+        <tr><td><input name="in43" id="in43"></td><td><input name="in53" id="in53"></td></tr>
+        <tr><td><input name="in44" id="in44"></td><td><input name="in54" id="in54"></td></tr>
+    </table>
+    <button type="submit" class="btn btn-primary" id="submit_button">Заполнить данные</button>
+    </form>
+
+</body>
+</html>

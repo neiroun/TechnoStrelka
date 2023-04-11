@@ -19,20 +19,23 @@ body{
 
 .bg {
     position: fixed;
-    display: flex;
-    width: 700px;
-    height: 800px;
-    background-color: rgba(253, 252, 252, 0.384);
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.381);
+    background-clip: padding-box;
+    width: 34.8%;
+    height: 83%;
     left: 30.56%;
-    top: 10%;
-    border: 10px solid;
-    border-image: linear-gradient(45deg,rgb(100, 33, 139), rgb(81, 129, 231)) 1;
-    border-radius: 10px;
+    top: 8%;
+    /* just to show box-shadow still works fine */
+    box-shadow: 0 3px 9px black, inset 0 0 9px white;
 }
+
 
 .line {
     display: block;
-    width: 32.5%;
+    width: 29%;
+    font-size: 16pt;
     max-width: 600px;
     height: 3.3%;
 }
@@ -46,7 +49,7 @@ body{
 }
 
 #login {
-    position: relative;
+    position: absolute;
     display: block;
     top: 55%;
     left: 33%;
@@ -55,6 +58,11 @@ body{
     border: solid;
     border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
     position: absolute;
+}
+
+#login:hover, #login:focus, #login:active, #password:hover, #password:focus, #password:active{
+    outline: 0;
+    outline-offset: 0;
 }
 
 #password {
@@ -69,20 +77,24 @@ body{
 }
 
 #sign_in {
+    position: absolute;
+    text-decoration: none;
+    margin-top: 35%;
+    margin-left: 39%;
     display: block;
-    top: 75%;
-    left: 41.15%;
-    background: linear-gradient(35deg, rgb(100, 33, 139), rgb(81, 129, 231));
-    border: none;
-    color: black;
+    /* padding: 15px 30px; */
     border-radius: 10px;
-    position: fixed;
+    box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+    transition: .15s ease-in-out;
 }
 
 #sign_in:hover {
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, .2),
-    0 2px 0 rgba(225, 225, 225, .4),
-    inset 0 2px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+    color: #F137A6;
 }
 
 #sign_like_guest {
@@ -91,11 +103,20 @@ body{
     border: none;
     font-size: 14pt;
     text-decoration: underline;
-    top: 80%;
+    top: 82%;
     position: fixed;
-    left: 41.15%
+    left: 40%;
 }
 
 #sign_like_guest:hover{
     color: blue;
 }
+
+#logo{
+    position: absolute;
+    left: 36%;
+    top: 3%;
+    width: 25%;
+}
+
+

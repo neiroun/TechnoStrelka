@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Технострелка</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+        <link rel="shortcut icon" href="/static/logo.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reg.css') }}">
+        <script src="{{ url_for('static', filename='script_reg.js') }}"></script>
+    </head>
+    <body>
+        <div id="container">
+            <button id="delet">Удалить</button>
+            <button id="add">Добавить</button>
+            <button class="sliding-button" id="back"></button>
+            <input type="login" class="line del" id="del" name="del" placeholder="Введите id для удаления (номер в списке)"></input>
+            <input type="login" class="line FIO" id="FIO" name="FIO" placeholder="Введите ФИО"></input>
+            <input type="login" class="line subject" id="subject" name="subject" placeholder="Введите предмет"></input>
+        </div>
+    </body>

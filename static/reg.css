@@ -1,0 +1,178 @@
+html{
+    background: url(bg1.png);
+}
+#del {
+    position: absolute;
+    display: block;
+    top: 53%;
+    left: 15%;
+    width: 25%;
+    height: 2%;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: solid;
+    border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
+    position: absolute;
+}
+#FIO {
+    position: absolute;
+    display: block;
+    top: 51%;
+    left: 68%;
+    height: 2%;
+    width: 25%;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: solid;
+    border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
+    position: absolute;
+}
+#subject {
+    position: absolute;
+    display: block;
+    top: 55%;
+    height: 2%;
+    width: 25%;
+    left: 68%;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: solid;
+    border-image: linear-gradient(rgb(100, 33, 139), rgb(81, 129, 231)) 1;
+    position: absolute;
+}
+
+#del:hover, #del:focus, #del:active, #FIO:hover, #FIO:focus, #FIO:active, #subject:hover, #subject:focus, #subject:active{
+    outline: 0;
+    outline-offset: 0;
+}
+#delet{
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+    border-radius: 10px;
+    background-size: 80% 80%;
+    width: 10%;
+    bottom: 30%;
+    left: 23%;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#delet:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#delet:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #f2f3f4;
+    border-image: none;
+    }
+#delet:hover:before {
+    color: #f2f3f4;
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+    }
+#add{
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    left: 5.5%;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+    border-radius: 10px;
+    background-size: 80% 80%;
+    width: 10%;
+    bottom: 30%;
+    left: 76%;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#add:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#add:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #f2f3f4;
+    border-image: none;
+    }
+#add:hover:before {
+    color: #f2f3f4;
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+    }
+#back{
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: absolute;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    border-image-slice: 1;
+    border-radius: 10px;
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+    background-size: 80% 80%;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#back:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #2863e2, #3e58a0, #9a39c0, #a633d3);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    }
+#back:hover {
+    background: rgba(255, 255, 255, 0);
+    background: url(https://svgsilh.com/svg_v2/2635377.svg) center center no-repeat;
+    background-size: 80% 80%;
+    border-image: none;
+    }
+#back:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+    }

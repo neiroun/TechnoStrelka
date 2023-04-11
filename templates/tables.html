@@ -3,16 +3,91 @@
     <head>
         <meta charset="utf-8">
         <title>Технострелка</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="/static/logo.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+        <script src="{{ url_for('static', filename='script_main.js') }}"></script>
     </head>
     <body>
-        <table>
-            {% for i in rows %}
-                <tr>
-                {% for j in cols %}
-                    <td> {{ i }} + {{ j }}</td>
-                {% endfor %}
-                </tr>
+        <div class="select" id="list">
+            <input class="select__input" type="hidden" id="group_selector">
+            <div class="select__head">Выберите группу</div>
+            <ul class="select__list" style="display: none;">
+                <li class="select__item">1П</li>
+                <li class="select__item">2П</li>
+                <li class="select__item">3П</li>
+                <li class="select__item">4П</li>
+            </ul>
+        </div>
+        <ol class="rounded" id="rounded">
+            {% for i in range(val) %}
+                <li><a href="#">{{ teachers[i][1] + ' - ' + teachers[i][2] }}</a></li>
             {% endfor %}
+        </ol>
+        <a href="" class="sliding-button" id="back"></a>
+        <hr id="delimiter">
+        <table class="table" id="table">
+            <button id="reload">Обновить</button>
+            <button id="edit">Редактировать</button>
+            <button id="edit1">Редактировать</button>
+            <button id="schedule">Просмотреть расписание</button>
+            <button id="teacher">Список учителей</button>
+            <button id="About_ass">О нас</button>
+            <table id="table_team">
+                <tr>
+                    <td colspan="3">
+                        <h1 id="ytata">Мы команда "Утята" из города Арзамас</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><img src="https://sun9-23.userapi.com/impg/qcAWYJjqp1l0BAPPJdToisOfphCS509mmrSvcQ/bRoPcpS5zas.jpg?size=400x500&quality=96&sign=cbdb1e230ac7f40d18001828c75b940c&type=album"
+            id="foto1"></td>
+                    <td align="center"><img src="https://sun9-10.userapi.com/impg/imnBoZ9ZEm6WHUnaT_Zm4Lm6db4J2GfTsdvVEg/G3HhdgHwpKY.jpg?size=400x500&quality=96&sign=bbca636ee31855e03b65f57397fded7e&type=album"
+            id="foto2"></td>
+                    <td align="center"><img src="https://sun9-52.userapi.com/impg/hM8pIZUFrwHOQleK-y63NbbTUV8qIbKiecUx4w/BBMw9l8X2IU.jpg?size=400x500&quality=96&sign=006973e16160c8d6681913fdf49c8fee&type=album"
+            id="foto3"></td>
+                </tr>
+                <tr>
+                    <td><h2 id="left_text">Рослов М.С.</h2></td>
+                    <td><h2 id="middle_text" >Панкратов Д.Н.</h2></td>
+                    <td><h2 id="right_text">Ахмедов Э.Т.</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+            <h3 id="team">Мы команда ЦЦОД IT-куб г. Арзамас. Мы крутые креативные ребята, которые готовы удивлять вас своими бомбезными проектами и идеями!</h3></td>
+                </tr>
+            </table>
 
+            <div>
+                <table class="table" id="schedule_block">
+            <caption>Расписание групп</caption>
+            <thead>
+                <tr>
+                    <th>Занятия</th>
+                    <th>Понедельник</th>
+                    <th>Вторник</th>
+                    <th>Среда</th>
+                    <th>Четверг</th>
+                    <th>Пятница</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(4) %}
+                    <tr>
+                        <td>{{ i + 1 }} пара</td>
+                    {% for j in range(5) %}
+                        <td> {{ schedule[j][i] + (stat if schedule[j][i] != '' else '') }}
+                            <!--Кнопки-->
+                            {% if schedule[j][i] != '' %}
+                                {% set a = ['i0','i1','i2','i3','i4','i5','i6','i7','i8','i9','i10','i11','i12','i13','i14','i15','i16','i17','i18','i19'] %}
+                                <button name=a[i*5+j]>X</button>reset
+                            {% endif %}
+                            <!--end-->
+                        </td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+                </table>
         </table>
     </body>
